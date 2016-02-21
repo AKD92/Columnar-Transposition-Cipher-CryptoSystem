@@ -1,0 +1,32 @@
+# Project: Column Cipher
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = obj/ccipher.o obj/ccipher_utilities.o
+LINKOBJ  = obj/ccipher.o obj/ccipher_utilities.o
+LIBS     = -L"C:/Dev-Cpp/MinGW32/lib" -L"C:/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -L"G:/Ashish Files/documents/Dev C++ Project Files/Linked List/lib" -L"G:/Ashish Files/documents/Dev C++ Project Files/Stack and Queue/lib" -llinkedlist -s
+INCS     = -I"C:/Dev-Cpp/MinGW32/include" -I"C:/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include" -I"G:/Ashish Files/documents/Dev C++ Project Files/Linked List/src" -I"G:/Ashish Files/documents/Dev C++ Project Files/Stack and Queue/src"
+CXXINCS  = -I"C:/Dev-Cpp/MinGW32/include" -I"C:/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include" -I"C:/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include/c++" -I"G:/Ashish Files/documents/Dev C++ Project Files/Linked List/src" -I"G:/Ashish Files/documents/Dev C++ Project Files/Stack and Queue/src"
+BIN      = lib/libccipher.a
+CXXFLAGS = $(CXXINCS) -ansi -std=c90 -Wall
+CFLAGS   = $(INCS) -ansi -std=c90 -Wall
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	ar r $(BIN) $(LINKOBJ)
+	ranlib $(BIN)
+
+obj/ccipher.o: src/ccipher.c
+	$(CC) -c src/ccipher.c -o obj/ccipher.o $(CFLAGS)
+
+obj/ccipher_utilities.o: src/ccipher_utilities.c
+	$(CC) -c src/ccipher_utilities.c -o obj/ccipher_utilities.o $(CFLAGS)
