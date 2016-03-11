@@ -111,20 +111,20 @@ int ccipher_readRow(ColumnData *cData, char *outputText, int *outputLen) {
 	arrayLength = cData->rowSize * cData->columnSize;
 	
 	LOOP_BEGIN:
+		if (index == arrayLength)
+			goto LOOP_END;
 
-	if (index == arrayLength)
-		goto LOOP_END;
-
-	charValue = *(cData->data + index);
-	if (charValue == 0)
-		goto LOOP_END;
-		
-	*(outputText + index) = charValue;
-	index = index + 1;
-	goto LOOP_BEGIN;
+		charValue = *(cData->data + index);
+		if (charValue == 0)
+			goto LOOP_END;
+			
+		*(outputText + index) = charValue;
+		index = index + 1;
+		goto LOOP_BEGIN;
 	
 	LOOP_END:
 	*outputLen = index;
+	
 	return 0;
 }
 
