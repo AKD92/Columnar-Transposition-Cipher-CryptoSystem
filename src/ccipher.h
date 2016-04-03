@@ -1,11 +1,14 @@
 
 
 /************************************************************************************
-	Interface of column cipher
+	Program Interface of Columnar Transposition Cypher
 	Author:             Ashis Kumar Das
-	ID:                 11301002
 	Email:              akd.bracu@gmail.com
+	GitHub:				https://github.com/AKD92
 *************************************************************************************/
+
+
+
 
 
 

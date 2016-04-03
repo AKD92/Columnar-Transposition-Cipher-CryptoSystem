@@ -1,11 +1,14 @@
 
 
 /************************************************************************************
-	Implementation of core column cipher functions
+	Implementation of Columnar Transposition Cypher Core Algorithms
 	Author:             Ashis Kumar Das
-	ID:                 11301002
 	Email:              akd.bracu@gmail.com
+	GitHub:				https://github.com/AKD92
 *************************************************************************************/
+
+
+
 
 
 
@@ -14,6 +17,9 @@
 #include <math.h>
 #include <list.h>
 #include "ccipher.h"
+
+
+
 
 
 

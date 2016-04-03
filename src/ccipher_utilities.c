@@ -1,11 +1,13 @@
 
 
 /************************************************************************************
-	Utility routined used by column cipher project
+	Implementation of Columnar Transposition Cypher Utility Functions
 	Author:             Ashis Kumar Das
-	ID:                 11301002
 	Email:              akd.bracu@gmail.com
+	GitHub:				https://github.com/AKD92
 *************************************************************************************/
+
+
 
 
 
@@ -15,9 +17,15 @@
 #include <string.h>
 #include <list.h>
 
+
+
+
+
 #define BUFFERSIZE 10
 
 #define cmp_char(c1, c2) ((*c1) - (*c2))
+
+
 
 
 
