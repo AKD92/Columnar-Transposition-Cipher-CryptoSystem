@@ -4,7 +4,7 @@
 	Implementation of Columnar Transposition Cypher Utility Functions
 	Author:             Ashis Kumar Das
 	Email:              akd.bracu@gmail.com
-	GitHub:				https://github.com/AKD92
+	GitHub:             https://github.com/AKD92
 *************************************************************************************/
 
 
